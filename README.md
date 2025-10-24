@@ -26,9 +26,10 @@ This skill:
 ## 🚀 Quick Start
 
 ### Installation
-1. Download [latest release](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases)
-2. Upload to Claude.ai or ChatGPT
-3. Say: `Install this skill`
+1. Download [conversation-skill-analyzer-v4.0.0.zip](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases/latest/download/conversation-skill-analyzer-v4.0.0.zip)
+2. Go to [Claude Settings > Skills](https://claude.ai/settings/skills) or ChatGPT
+3. Upload the ZIP file
+4. Say: `Install this skill`
 
 ### Usage
 
