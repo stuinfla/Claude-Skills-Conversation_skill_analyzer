@@ -1,8 +1,6 @@
 ---
 name: conversation-skill-analyzer
 description: Analyzes your Claude conversation history to discover which custom skills would save you the most time, make you the most money, or eliminate your biggest frustrations. Returns a data-driven, prioritized roadmap of your top 5 skill-building opportunities with ROI estimates and evidence from your actual usage patterns.
-platform: claude, chatgpt
-version: 4.0.0
 ---
 
 # Conversation Skill Analyzer v4.0
