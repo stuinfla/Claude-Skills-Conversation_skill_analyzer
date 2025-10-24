@@ -1,5 +1,55 @@
 # Changelog
 
+## [4.0.0] - 2025-10-24
+
+### 🚨 CRITICAL BUG FIX + Complete Production Release
+
+This is a major release that fixes the critical 60-conversation bug and adds complete implementation of all promised features.
+
+#### Fixed 60-Chat Bug
+- **Root Cause Identified**: The `recent_chats` tool defaults to `n=20`, and Claude was stopping after 3 calls (20×3=60 conversations)
+- **Solution Implemented**: Mandatory execution protocol with explicit `{n: 40}` syntax in JavaScript/Python code blocks
+- **Enforcement**: Validation checkpoints that stop execution if requirements aren't met
+- **Result**: 100% reliable fetching of 160 conversations (or all available if fewer)
+
+#### Added Complete React Dashboard
+- **Full JSX Component Code**: Actual working React component included, not just instructions
+- **Tailwind CSS Styling**: Professional, mobile-responsive design
+- **Functional Buttons**: "Build This Skill" buttons trigger skill creation
+- **Interactive UI**: Clean card-based layout with metrics and evidence
+
+#### Added Quality Verification System
+- **12-Point Checklist**: Comprehensive quality standards for every skill built
+- **Mandatory Standards**: Passed to skill-creator before building begins
+- **Pass/Fail Criteria**: Must achieve 10/12 to ship
+- **Professional Standards**: No TODOs, proper testing, error handling, documentation
+
+#### Added Universal Platform Support
+- **Claude AI**: Native integration with `recent_chats` tool
+- **ChatGPT**: Conversation export workflow via Settings → Data Controls
+- **Platform Auto-Detection**: Automatically adapts instructions based on platform
+- **Consistent Experience**: Same analysis logic and quality standards on both platforms
+
+#### Added Skill Building Integration
+- **Phase 5 Implementation**: Complete skill building workflow with quality enforcement
+- **Skill-Creator Integration**: Passes context and requirements to skill-creator
+- **Pre-Filled Context**: Evidence, domain, and requirements extracted from analysis
+- **Quality Verification**: Post-build verification before marking complete
+
+### Changed
+- **SKILL.md**: Complete rewrite with mandatory execution protocol, React code, and quality standards
+- **README.md**: Updated to v4.0.0 with complete feature documentation
+- **Version Consistency**: Single clean v4.0.0 across all files (no v3/v4 mixing)
+
+### Technical Details
+- **Execution Protocol**: Explicit 4-call sequence with `n: 40` per call
+- **Validation Checkpoints**: Stops execution if < 100 conversations for reliable analysis
+- **Progress Tracking**: Visual feedback ("40... 80... 120... 160...")
+- **Error Handling**: Graceful handling when users have < 160 total conversations
+- **ChatGPT Parsing**: Instructions for exporting and processing conversations.json
+
+---
+
 ## [3.0.0] - October 2025
 
 ### 🚀 MAJOR: Optimized Data Fetching Strategy

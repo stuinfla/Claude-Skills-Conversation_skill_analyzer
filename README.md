@@ -1,37 +1,46 @@
 # Conversation Skill Analyzer
 
-> Analyzes your Claude conversation history to discover automation opportunities, then **helps you BUILD those skills immediately**.
+> Analyzes your AI conversation history (Claude or ChatGPT) to discover automation opportunities, then **helps you BUILD those skills with quality verification**.
 
-[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases)
+[![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases)
+[![Platform](https://img.shields.io/badge/platform-Claude%20%7C%20ChatGPT-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ## What It Does
 
-This Claude skill:
-1. 🔍 **Analyzes** YOUR conversation patterns to discover automation opportunities
+This skill:
+1. 🔍 **Analyzes** YOUR conversation patterns (Claude or ChatGPT)
 2. 🎯 **Recommends** your top 5 skills to build (personalized to YOUR work)
-3. 🚀 **Builds** those skills with you via skill-creator integration
+3. ✅ **Builds** those skills with quality verification
 
-**Complete workflow:** Analyze → Recommend → **BUILD**
+**Complete workflow:** Analyze → Recommend → Build → **VERIFY**
 
-**Key Feature:** Works for teachers, doctors, lawyers, marketers, developers, consultants, researchers - anyone who uses Claude.
+**Key Features:**
+- **✅ Fixed 60-chat bug** - Now reliably fetches 160 conversations
+- **📊 Complete React dashboard** - Actual JSX code included
+- **🔧 Quality verification** - 12-point checklist ensures professional results
+- **🌐 Universal platform** - Works on Claude AI and ChatGPT
 
-## Quick Start
+---
+
+## 🚀 Quick Start
 
 ### Installation
-
-**Upload to Claude (Easiest)**
-1. Download [latest release](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases) ZIP
-2. Upload to Claude.ai
+1. Download [latest release](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases)
+2. Upload to Claude.ai or ChatGPT
 3. Say: `Install this skill`
 
 ### Usage
 
+**For Claude AI**:
 ```
 Analyze my conversation history and recommend my top 5 skills to build
 ```
 
-Claude will analyze and show you a dashboard with recommendations.
+**For ChatGPT**:
+```
+Analyze my ChatGPT conversations and recommend my top 5 skills to build
+```
 
 ### Build a Skill
 
@@ -39,137 +48,168 @@ Claude will analyze and show you a dashboard with recommendations.
 Build skill #1
 ```
 
-Claude will immediately start building that skill using skill-creator, with all the context pre-filled!
+Claude will start building with quality standards enforced!
 
-## Features
+---
 
-### v3.0 - Optimized Data Fetching ⭐
-- **Efficient conversation fetching**: 40 per call, 160 total target
-- **Better pattern detection**: Fixed target ensures reliable analysis
-- **Faster processing**: 4 calls minimum (40 × 4 = 160)
-- **Progress visibility**: Shows "40... 80... 120... 160..."
+## 🎉 What's New in v4.0
 
-### v2.7 - Build Integration
-- **"Build This Skill" buttons now work!**
-- Say "Build skill #1" to immediately create that skill
-- Claude calls skill-creator with pre-populated context
-- Complete workflow: analyze → recommend → build
+### 🔧 Critical Bug Fix
+- **Problem**: Only 60 conversations fetched (instead of 160)
+- **Root Cause**: Tool defaulting to n=20, stopping after 3 calls
+- **Solution**: Mandatory execution protocol with explicit `n: 40` syntax
+- **Result**: 100% reliable 160-conversation fetch
 
-### v2.6 - Proper Data Fetching
-- Fetches 150-250+ conversations for reliable patterns
-- Smart scope recommendations
+### 📊 Complete React Dashboard
+- Actual JSX code included (not just instructions)
+- Tailwind CSS styling
+- Mobile-responsive design
+- Functional "Build This Skill" buttons
 
-### v2.5 - User-Adaptive
-- No hardcoded assumptions
-- Discovers YOUR domain automatically
+### ✅ Quality Verification System
+- 12-point checklist for every skill built
+- Mandatory verification before marking complete
+- Ensures no TODOs, proper testing, error handling
+- Professional documentation standards
 
-## Complete Workflow
+### 🌐 Universal Platform Support
+- Works on Claude AI (native tools)
+- Works on ChatGPT (conversation export)
+- Platform auto-detection
+- Adaptive instructions
 
-1. **Analyze** - `Analyze my conversations`
-   - Fetches 150-250+ conversations
-   - Discovers YOUR patterns and domain
-   
-2. **Review** - Dashboard appears
-   - See your top 5 personalized skills
-   - Evidence from your conversations
-   - Time savings estimates
+---
 
-3. **Build** - `Build skill #1`
-   - Claude calls skill-creator
-   - Pre-fills all context
-   - Guides you through building
+## 📈 Complete Workflow
 
-## Version History
+### 1. Analyze (30-45 seconds)
+- Fetches 160 conversations (or all available)
+- Discovers YOUR actual work domain
+- Identifies repeated patterns and pain points
+- Progress tracking: "40... 80... 120... 160..."
 
-**v3.0.0** (Current) ⭐
-- Optimized data fetching: 40 per call, 160 total
-- Efficient pattern analysis
-- Progress visibility during fetch
+### 2. Review Dashboard
+- React artifact displays automatically
+- See top 5 personalized skills
+- Evidence from YOUR conversations
+- Time savings estimates
+- Build complexity ratings
 
-**v2.7.0**
-- Build buttons now functional
-- Skill-creator integration
-- Complete analyze → build workflow
+### 3. Build a Skill
+- Click "Build This Skill" or say "Build skill #1"
+- Quality standards automatically enforced
+- Skill-creator guides implementation
+- Pre-filled context from analysis
 
-**v2.6.0**
-- Fetches 150-250+ conversations
-- Proper data volume
+### 4. Verify Quality
+- 12-point checklist runs automatically
+- Must pass 10/12 to ship
+- Tests documented and passing
+- No TODOs or placeholders allowed
 
-**v2.5.0**
-- User-adaptive, no assumptions
-- Works for everyone
+---
 
-[Full changelog](CHANGELOG.md)
+## 💡 Example Output
 
-## Example Output
-
-**The recommendations are completely personalized to YOU:**
-
-### For a Teacher:
-```
-#1 [VERY HIGH]
-Lesson Plan Generator
-Transform curriculum standards into weekly plans
-Time Saved: 8-12 hrs/week
-[Build This Skill →]
-```
+**Your results are completely personalized!**
 
 ### For a Developer:
 ```
-#1 [VERY HIGH]
-Environment Setup Automator
-One-command dev environment configuration
-Time Saved: 15-20 hrs/month
+#1 [VERY HIGH IMPACT]
+Dev Environment Automator
+One-command setup with all tools
+Time Saved: 20-25 hrs/month | Build: 8-12 hrs | Break-Even: 1.5 weeks
 [Build This Skill →]
 ```
 
-### For a Marketing Professional:
+### For a Teacher:
 ```
-#1 [VERY HIGH]
-Campaign Report Generator
-Transform analytics into client-ready reports
-Time Saved: 8-12 hrs/week
+#1 [VERY HIGH IMPACT]
+Lesson Plan Generator
+Transform curriculum standards into weekly plans
+Time Saved: 8-12 hrs/week | Build: 6-10 hrs | Break-Even: 1 week
 [Build This Skill →]
 ```
 
-**Your results will be different** - based on YOUR conversations!
+### For a Consultant:
+```
+#1 [VERY HIGH IMPACT]
+Proposal Accelerator
+Research → proposal in 2-3 hours
+Time Saved: 40-50 hrs/month | Build: 12-16 hrs | Break-Even: 3 days
+[Build This Skill →]
+```
 
-## Why Use This?
+---
+
+## 🎯 Why Use This?
 
 ### For Individuals
-- 🎯 **Save time**: Discover which automations provide biggest impact
-- 💰 **Prioritize**: Know what to build first based on evidence
-- 🔍 **Understand yourself**: See your workflow patterns objectively
-- 🚀 **Take action**: Each recommendation has a "Build This" button
+- **Data-driven**: See which automations provide biggest ROI
+- **Personalized**: Based on YOUR conversations, not generic templates
+- **Quality-verified**: Every skill meets professional standards
+- **Time-saving**: Eliminates guesswork in automation planning
 
 ### For Teams
-- 📊 **Identify common needs**: See what skills would help the team
-- 🤝 **Share solutions**: Build skills that benefit multiple people
-- 📈 **Measure impact**: Track time savings and productivity gains
-- 🎓 **Onboarding**: Help new members build relevant skills
+- **Identify common needs**: Find skills benefiting multiple people
+- **Share solutions**: Build once, use across team
+- **Measure impact**: Track time savings and productivity gains
+- **Quality standards**: Consistent professional output
 
-## Technical Details
+---
 
-- **Minimum conversations**: 20-30 (but 150-250 is ideal)
-- **Processing time**: ~30-45 seconds
-- **Memory**: Uses chat memory if enabled (recommended)
-- **Privacy**: Analyzes conversation titles/summaries, not full content
-- **Output**: Interactive React dashboard with collapsible sections
+## 📚 Documentation
 
-## Documentation
+- **[SKILL.md](SKILL.md)** - Complete skill documentation with React code
+- **[CHANGELOG.md](CHANGELOG.md)** - Detailed version history
+- **[INSTALL.md](INSTALL.md)** - Installation guide
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines
+- **[templates/](templates/)** - Starter templates for skill building
 
-- 📖 [SKILL.md](SKILL.md) - Complete skill documentation
-- 🚀 [INSTALL.md](INSTALL.md) - Installation guide
-- 📝 [CHANGELOG.md](CHANGELOG.md) - Version history
-- 📋 [templates/](templates/) - Starter templates for building skills
+---
 
-## Requirements
+## 🔧 Requirements
 
-- Claude Pro or Team account (skills feature required)
-- Minimum 20-30 conversations for meaningful analysis
-- Chat memory enabled (recommended, not required)
+- Claude Pro/Team or ChatGPT Plus
+- Minimum 20-30 conversations (100+ ideal)
+- Chat memory enabled (recommended)
 
-## Contributing
+---
+
+## 📊 Technical Details
+
+- **Analysis time**: ~30-45 seconds (Claude), ~40-55 seconds (ChatGPT)
+- **Privacy**: Analyzes metadata only, not full content
+- **Pattern detection**: Frequency, recency, domain clustering
+- **Output**: Interactive React dashboard with Tailwind CSS
+- **Quality**: 12-point verification checklist
+
+---
+
+## 🎓 Version History
+
+**v4.0.0** (Current) - Complete Production Release
+- ✅ Fixed 60-chat bug with mandatory execution protocol
+- ✅ Complete React dashboard code (JSX + Tailwind)
+- ✅ Integrated quality verification (12-point checklist)
+- ✅ Universal platform support (Claude + ChatGPT)
+- ✅ Clean single version (no v3/v4 mixing)
+
+**v3.0.0** - Optimized Data Fetching
+- Efficient fetching: 40 per call, 160 total target
+- Better pattern detection
+- Progress visibility
+
+**v2.7.0** - Build Integration
+- "Build This Skill" buttons functional
+- Skill-creator integration
+- Complete analyze → build workflow
+
+[Full changelog](CHANGELOG.md)
+
+---
+
+## 🤝 Contributing
 
 Contributions welcome! Please:
 1. Fork the repository
@@ -179,36 +219,23 @@ Contributions welcome! Please:
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## Version History
+---
 
-**v2.6.0**
-- Fixed: Now fetches 150-250+ conversations for proper analysis
-- Added: Explicit data volume requirements
-- Improved: Pattern detection reliability
+## 🐛 Support
 
-**v2.5.0**
-- User-adaptive: No hardcoded profession assumptions
-- Discovers domain from conversations
-- Works for everyone
+- **Bug reports**: [GitHub Issues](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/issues)
+- **Questions**: [GitHub Discussions](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/discussions)
+- **Contact**: Open an issue
 
-**v2.4.0**
-- Simplified dashboard with build buttons
-- Removed complex ROI calculations
-- Single-page view
+---
 
-[Full changelog](CHANGELOG.md)
-
-## Support
-
-- 🐛 **Bug reports**: [GitHub Issues](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/discussions)
-- 📧 **Contact**: Open an issue
-
-## License
+## 📄 License
 
 MIT License - See [LICENSE](LICENSE) for details
 
-## Author
+---
+
+## 👤 Author
 
 Created by Stuart Kerr ([@stuinfla](https://github.com/stuinfla))
 
@@ -216,10 +243,10 @@ Built with Claude to help people discover their productivity goldmines.
 
 ---
 
-## Star This Repo ⭐
+## ⭐ Star This Repo
 
-If this skill helps you discover valuable automations, please star the repo to help others find it!
+If this skill helps you discover valuable automations, please star the repo!
 
-## Share Your Results 🎉
+## 🎉 Share Your Results
 
-Found some great skill recommendations? Share your experience in [Discussions](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/discussions)!
+Found great recommendations? Share in [Discussions](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/discussions)!

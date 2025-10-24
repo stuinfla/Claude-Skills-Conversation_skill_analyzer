@@ -6,7 +6,7 @@
 
 1. **Download the skill**
    - Go to [Releases](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases)
-   - Download `conversation-skill-analyzer-v2.6.zip`
+   - Download `conversation-skill-analyzer-v4.0.zip`
 
 2. **Install in Claude**
    - Open Claude.ai
@@ -29,9 +29,9 @@
 ### Option 2: Manual Installation
 
 1. **Download and extract**
-   - Download `conversation-skill-analyzer-v2.6.zip`
+   - Download `conversation-skill-analyzer-v4.0.zip`
    - Extract the ZIP file
-   - You'll get a folder like `skill-analyzer-v2.6/`
+   - You'll get a folder like `skill-analyzer-v4.0/`
 
 2. **Rename the folder**
    ```
@@ -95,7 +95,7 @@ cd Claude-Skills-Conversation_skill_analyzer
 
 **How it works:**
 1. Create a new Release on GitHub
-2. Attach the ZIP file (`conversation-skill-analyzer-v2.6.zip`)
+2. Attach the ZIP file (`conversation-skill-analyzer-v4.0.zip`)
 3. Add release notes from CHANGELOG.md
 4. Users download from Releases page
 
@@ -146,10 +146,10 @@ This is currently the best way:
 ```bash
 # Create a release on GitHub
 1. Go to repository → Releases → Draft a new release
-2. Tag: v2.6.0
-3. Title: "v2.6.0 - User-Adaptive Analysis"
+2. Tag: v4.0.0
+3. Title: "v4.0.0 - Complete Production Implementation"
 4. Description: Copy from CHANGELOG.md
-5. Attach: conversation-skill-analyzer-v2.6.zip
+5. Attach: conversation-skill-analyzer-v4.0.zip
 6. Publish release
 ```
 
@@ -164,9 +164,9 @@ Ensure these files are up-to-date:
 ### 3. Semantic Versioning
 
 Follow [semver](https://semver.org/):
-- **Major (3.0.0)**: Breaking changes
-- **Minor (2.7.0)**: New features, backward compatible
-- **Patch (2.6.1)**: Bug fixes
+- **Major (4.0.0)**: Breaking changes
+- **Minor (4.1.0)**: New features, backward compatible
+- **Patch (4.0.1)**: Bug fixes
 
 ### 4. Keep It Simple
 

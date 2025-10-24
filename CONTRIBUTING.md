@@ -206,9 +206,9 @@ Try to test with conversations from different domains:
 
 We use [Semantic Versioning](https://semver.org/):
 
-- **Major (3.0.0)**: Breaking changes that affect existing users
-- **Minor (2.7.0)**: New features, backward compatible
-- **Patch (2.6.1)**: Bug fixes, small improvements
+- **Major (4.0.0)**: Breaking changes that affect existing users
+- **Minor (4.1.0)**: New features, backward compatible
+- **Patch (4.0.1)**: Bug fixes, small improvements
 
 ## Questions?
 
