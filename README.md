@@ -1,15 +1,15 @@
 # Conversation Skill Analyzer
 
-> Analyzes your AI conversation history (Claude or ChatGPT) to discover automation opportunities, then **helps you BUILD those skills with quality verification**.
+> Analyzes your Claude conversation history to discover automation opportunities, then **helps you BUILD those skills with quality verification**.
 
-[![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases)
-[![Platform](https://img.shields.io/badge/platform-Claude%20%7C%20ChatGPT-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer)
+[![Version](https://img.shields.io/badge/version-4.0.1-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases)
+[![Platform](https://img.shields.io/badge/platform-Claude%20AI-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ## What It Does
 
 This skill:
-1. 🔍 **Analyzes** YOUR conversation patterns (Claude or ChatGPT)
+1. 🔍 **Analyzes** YOUR Claude conversation patterns
 2. 🎯 **Recommends** your top 5 skills to build (personalized to YOUR work)
 3. ✅ **Builds** those skills with quality verification
 
@@ -19,28 +19,22 @@ This skill:
 - **✅ Fixed 60-chat bug** - Now reliably fetches 160 conversations
 - **📊 Complete React dashboard** - Actual JSX code included
 - **🔧 Quality verification** - 12-point checklist ensures professional results
-- **🌐 Universal platform** - Works on Claude AI and ChatGPT
+- **🎯 Claude-native** - Uses recent_chats tool for direct conversation access
 
 ---
 
 ## 🚀 Quick Start
 
 ### Installation
-1. Download [conversation-skill-analyzer-v4.0.0.zip](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases/latest/download/conversation-skill-analyzer-v4.0.0.zip)
-2. Go to [Claude Settings > Skills](https://claude.ai/settings/skills) or ChatGPT
+1. Download [conversation-skill-analyzer-v4.0.1.zip](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases/latest/download/conversation-skill-analyzer-v4.0.1.zip)
+2. Go to [Claude Settings > Skills](https://claude.ai/settings/skills)
 3. Upload the ZIP file
 4. Say: `Install this skill`
 
 ### Usage
 
-**For Claude AI**:
 ```
 Analyze my conversation history and recommend my top 5 skills to build
-```
-
-**For ChatGPT**:
-```
-Analyze my ChatGPT conversations and recommend my top 5 skills to build
 ```
 
 ### Build a Skill
@@ -53,7 +47,15 @@ Claude will start building with quality standards enforced!
 
 ---
 
-## 🎉 What's New in v4.0
+## 🎉 What's New in v4.0.1
+
+### 🔧 Platform Clarity
+- **Removed false ChatGPT compatibility claims**
+- ChatGPT doesn't have native conversation history API
+- Skill is Claude-only, using `recent_chats` tool
+- Honest and accurate capability description
+
+## Previous Updates (v4.0.0)
 
 ### 🔧 Critical Bug Fix
 - **Problem**: Only 60 conversations fetched (instead of 160)
@@ -72,12 +74,6 @@ Claude will start building with quality standards enforced!
 - Mandatory verification before marking complete
 - Ensures no TODOs, proper testing, error handling
 - Professional documentation standards
-
-### 🌐 Universal Platform Support
-- Works on Claude AI (native tools)
-- Works on ChatGPT (conversation export)
-- Platform auto-detection
-- Adaptive instructions
 
 ---
 
@@ -171,7 +167,7 @@ Time Saved: 40-50 hrs/month | Build: 12-16 hrs | Break-Even: 3 days
 
 ## 🔧 Requirements
 
-- Claude Pro/Team or ChatGPT Plus
+- Claude Pro, Team, or Enterprise (Skills feature required)
 - Minimum 20-30 conversations (100+ ideal)
 - Chat memory enabled (recommended)
 
@@ -179,21 +175,26 @@ Time Saved: 40-50 hrs/month | Build: 12-16 hrs | Break-Even: 3 days
 
 ## 📊 Technical Details
 
-- **Analysis time**: ~30-45 seconds (Claude), ~40-55 seconds (ChatGPT)
+- **Analysis time**: ~30-45 seconds
 - **Privacy**: Analyzes metadata only, not full content
 - **Pattern detection**: Frequency, recency, domain clustering
 - **Output**: Interactive React dashboard with Tailwind CSS
 - **Quality**: 12-point verification checklist
+- **Native tool**: Uses Claude's `recent_chats` API
 
 ---
 
 ## 🎓 Version History
 
-**v4.0.0** (Current) - Complete Production Release
+**v4.0.1** (Current) - Platform Clarity Patch
+- ✅ Removed false ChatGPT compatibility claims
+- ✅ Claude-only with accurate capability description
+- ✅ Honest platform requirements
+
+**v4.0.0** - Complete Production Release
 - ✅ Fixed 60-chat bug with mandatory execution protocol
 - ✅ Complete React dashboard code (JSX + Tailwind)
 - ✅ Integrated quality verification (12-point checklist)
-- ✅ Universal platform support (Claude + ChatGPT)
 - ✅ Clean single version (no v3/v4 mixing)
 
 **v3.0.0** - Optimized Data Fetching

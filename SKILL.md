@@ -5,9 +5,9 @@ description: Analyzes your Claude conversation history to discover which custom 
 
 # Conversation Skill Analyzer v4.0
 
-**🎯 Works on Claude AI and ChatGPT** | **🔧 Bug Fixed** | **✅ Quality Verified**
+**Claude AI Only** | **🔧 Bug Fixed** | **✅ Quality Verified**
 
-Identifies high-value automation opportunities by analyzing YOUR conversation patterns, then helps you BUILD those skills with quality standards.
+Identifies high-value automation opportunities by analyzing YOUR Claude conversation patterns, then helps you BUILD those skills with quality standards.
 
 ---
 
@@ -23,21 +23,15 @@ Identifies high-value automation opportunities by analyzing YOUR conversation pa
 
 ## Quick Start
 
-**Claude AI**:
 ```
 Analyze my conversation history and recommend my top 5 skills to build
-```
-
-**ChatGPT**:
-```
-Analyze my ChatGPT conversations and recommend my top 5 skills to build
 ```
 
 ---
 
 ## 📥 Phase 1: Data Collection
 
-### For Claude AI (MANDATORY PROTOCOL)
+### MANDATORY PROTOCOL
 
 **YOU MUST FOLLOW THIS EXACT SEQUENCE**:
 
@@ -88,19 +82,6 @@ console.log("✓ Data collection complete. Starting analysis...");
 - ✅ MUST show progress: "40... 80... 120... 160..."
 - ✅ MUST validate before proceeding
 - ❌ DO NOT proceed if < 100 conversations
-
-### For ChatGPT
-
-1. **Request Export**:
-   ```
-   Please export your ChatGPT conversation history:
-   - Go to Settings → Data Controls → Export Data
-   - Wait for email with conversations.json
-   - Upload the file here
-   ```
-
-2. **Parse File**: Extract most recent 160 conversations (or all if fewer)
-3. **Proceed**: Use same analysis logic
 
 ---
 
@@ -444,12 +425,6 @@ I have skills for X, Y, Z. What am I missing?
 - Some repeated patterns
 - Conversation titles/summaries available
 
-### ChatGPT export not working?
-1. Settings → Data Controls → Export Data
-2. Wait for email (can take hours)
-3. Download conversations.json
-4. Upload to chat
-
 ---
 
 ## 📊 Technical Details
@@ -461,8 +436,7 @@ I have skills for X, Y, Z. What am I missing?
 - Complexity rating: technical requirements
 
 **Performance**:
-- Claude: ~30-45 seconds
-- ChatGPT: ~40-55 seconds (+ file parsing)
+- Analysis time: ~30-45 seconds
 - Dashboard: Instant React artifact
 
 **Privacy**:
@@ -504,7 +478,6 @@ I have skills for X, Y, Z. What am I missing?
 - ✅ Explicit tool syntax with validation
 - ✅ Complete React dashboard code
 - ✅ Integrated quality standards
-- ✅ ChatGPT compatibility
 - ✅ Verification protocol
 
 **Previous versions**:
@@ -517,7 +490,6 @@ I have skills for X, Y, Z. What am I missing?
 
 ## 📌 Key Features
 
-- 🎯 **UNIVERSAL**: Claude AI + ChatGPT
 - 🔧 **FIXED**: 160-conversation mandatory fetch
 - 🌟 **USER-ADAPTIVE**: Personalizes to YOUR work
 - 📊 **EVIDENCE-BASED**: Backed by conversation patterns
@@ -525,3 +497,4 @@ I have skills for X, Y, Z. What am I missing?
 - ✅ **QUALITY-VERIFIED**: 12-point checklist
 - ⚡ **EFFICIENT**: 4 optimized calls
 - 🔒 **PRIVATE**: Metadata-only analysis
+- 🎯 **CLAUDE-NATIVE**: Uses recent_chats tool

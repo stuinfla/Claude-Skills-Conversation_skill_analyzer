@@ -1,5 +1,28 @@
 # Changelog
 
+## [4.0.1] - 2025-10-24
+
+### 🔧 Platform Clarity Patch
+
+This patch release removes false ChatGPT compatibility claims and provides honest capability descriptions.
+
+#### Removed ChatGPT Support
+- **Root Issue**: ChatGPT does not have a native conversation history API like Claude's `recent_chats` tool
+- **Reality**: ChatGPT would require manual conversation export (Settings → Data Controls → Export), making this a static document analyzer rather than a dynamic skill
+- **Decision**: Remove all ChatGPT references to provide accurate capability description
+- **Result**: Skill is Claude-only, using Claude's native `recent_chats` API for direct conversation access
+
+#### Updated Documentation
+- **SKILL.md**: Removed ChatGPT sections, updated headers to "Claude AI Only"
+- **README.md**: Removed all ChatGPT installation instructions and compatibility claims
+- **Platform Badge**: Updated to show "Claude AI" only
+- **Requirements**: Clarified as "Claude Pro, Team, or Enterprise" only
+
+### Why This Matters
+Providing honest and accurate capability descriptions builds user trust and prevents frustration from attempting to use features that don't actually work.
+
+---
+
 ## [4.0.0] - 2025-10-24
 
 ### 🚨 CRITICAL BUG FIX + Complete Production Release
