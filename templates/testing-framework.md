@@ -282,3 +282,4 @@ Ship when you have:
 ---
 
 **Remember**: You can't test everything. Focus on critical paths first, then expand. Ship, learn, iterate.
+

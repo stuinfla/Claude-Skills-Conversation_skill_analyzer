@@ -158,3 +158,4 @@ A 9/10+ skill should have:
 ---
 
 **Pro Tip**: Don't try to build everything at once. Ship a minimal v1.0 that solves ONE problem really well, then iterate based on real usage.
+
