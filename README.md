@@ -1,8 +1,8 @@
 # Conversation Skill Analyzer
 
-> Analyzes up to 150 conversations using **streaming analytics**—no context overflow, clear progress, professional results.
+> Analyzes up to 150 conversations with **progressive insights** and **one-click building**—engaging experience from start to finish.
 
-[![Version](https://img.shields.io/badge/version-4.2.0-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases)
+[![Version](https://img.shields.io/badge/version-4.2.1-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases)
 [![Platform](https://img.shields.io/badge/platform-Claude%20AI-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
@@ -32,7 +32,7 @@ This skill uses **streaming statistical aggregation** to analyze your conversati
 ## 🚀 Quick Start
 
 ### Installation
-1. Download [conversation-skill-analyzer-v4.2.0.zip](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases/latest/download/conversation-skill-analyzer-v4.2.0.zip)
+1. Download [conversation-skill-analyzer-v4.2.1.zip](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases/latest/download/conversation-skill-analyzer-v4.2.1.zip)
 2. Go to [Claude Settings > Skills](https://claude.ai/settings/capabilities)
 3. Upload the ZIP file
 4. Say: `Install this skill`
@@ -53,7 +53,33 @@ Claude will start building with quality standards enforced!
 
 ---
 
-## 🎉 What's New in v4.2.0
+## 🎉 What's New in v4.2.1
+
+### 🎨 Enhanced User Experience
+**Professional, engaging analysis with progressive insights!**
+
+**Progressive Insight Sharing:**
+- ✨ Share discoveries every 20-40 conversations
+- 💡 "I'm seeing strong patterns in development..." (After 20)
+- 🎯 "Clear automation opportunity emerging..." (After 60)
+- 🔥 "Almost there! Recommendations will be personalized..." (After 100+)
+
+**One-Click Skill Building:**
+- 🚀 Prominent "Build This Skill" buttons with functional onClick handlers
+- 📋 Clear "Ready to Build?" call-to-action box in dashboard
+- 💬 Explicit text prompt: "Just say: 'Build skill #1'"
+- ✅ Complete path from analysis to building
+
+**Better Communication:**
+- Opening sets expectations: "I'll share what I'm finding along the way!"
+- Completion shows value: "Discovered 47 unique patterns across 142 conversations"
+- No more boring number counts - real insights in real-time
+
+---
+
+## Previous Updates
+
+### v4.2.0 - Streaming Analytics
 
 ### ⚡ Streaming Analytics Engine
 **The game-changer:** Now analyzes up to 150 conversations using streaming statistical aggregation.
@@ -216,7 +242,13 @@ Time Saved: 40-50 hrs/month | Build: 12-16 hrs | Break-Even: 3 days
 
 ## 🎓 Version History
 
-**v4.2.0** (Current) - Streaming Analytics Release
+**v4.2.1** (Current) - Enhanced UX Release
+- 🎨 **Progressive insights**: Share discoveries every 20-40 conversations during analysis
+- 🚀 **One-click building**: Prominent buttons with onClick handlers and clear CTAs
+- 💬 **Better communication**: Engaging messages throughout the experience
+- ✨ **Professional UX**: Value visible before final dashboard
+
+**v4.2.0** - Streaming Analytics Release
 - ⚡ **BREAKTHROUGH**: Streaming statistical aggregation handles 150+ conversations
 - 🎯 **Adaptive fetch**: Automatically adjusts to user's conversation count (20-150+)
 - 💬 **Clear UX**: Professional progress messaging, no confusing batch numbers
