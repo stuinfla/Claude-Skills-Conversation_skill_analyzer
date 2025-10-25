@@ -33,7 +33,7 @@ This skill uses **streaming statistical aggregation** to analyze your conversati
 
 ### Installation
 1. Download [conversation-skill-analyzer-v4.2.0.zip](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases/latest/download/conversation-skill-analyzer-v4.2.0.zip)
-2. Go to [Claude Settings > Skills](https://claude.ai/settings/skills)
+2. Go to [Claude Settings > Skills](https://claude.ai/settings/capabilities)
 3. Upload the ZIP file
 4. Say: `Install this skill`
 
