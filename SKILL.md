@@ -3,11 +3,11 @@ name: conversation-skill-analyzer
 description: Analyzes your Claude conversation history to discover which custom skills would save you the most time, make you the most money, or eliminate your biggest frustrations. Returns a data-driven, prioritized roadmap of your top 5 skill-building opportunities with ROI estimates and evidence from your actual usage patterns.
 ---
 
-# Conversation Skill Analyzer v4.2.1
+# Conversation Skill Analyzer v4.3.0
 
-**Claude AI Only** | **⚡ Streaming Analytics** | **✅ Engaging UX** | **🚀 One-Click Build**
+**Claude AI Only** | **⚡ Streaming Analytics** | **🎨 Domain-Adaptive UI** | **✨ Personalized**
 
-Discovers high-value automation opportunities by analyzing YOUR conversation patterns with progressive insights and one-click skill building—professional experience from start to finish.
+Discovers high-value automation opportunities with a beautiful, AI-driven interface that adapts to YOUR domain. Personalized insights, modern design, domain-specific color schemes—feels like a custom report built just for you.
 
 ---
 
@@ -21,20 +21,27 @@ Analyze my conversation history and recommend my top 5 skills to build
 
 ## 🎯 How It Works
 
-This skill delivers a **professional, engaging experience** from analysis to building:
+This skill delivers a **beautiful, personalized experience** that adapts to YOUR domain:
 
 1. **📡 Fetches** up to 150 conversations with adaptive batch sizing
 2. **💡 Shares insights** as it analyzes - you see value building in real-time
 3. **📊 Aggregates patterns** - frequency, recency, categories, technologies
-4. **🗑️ Discards raw data** immediately (only 5-10KB statistics retained)
-5. **🎨 Generates dashboard** - Interactive React UI with your top 5 opportunities
-6. **🚀 One-click building** - Click any "Build This Skill" button to create it instantly
+4. **👤 Personalizes** - Extracts your name and primary domain
+5. **🎨 Generates custom UI** - Domain-adaptive colors and personalized dashboard
+6. **🚀 One-click building** - Beautiful gradient buttons to build any skill
+
+**Personalization Features**:
+- 🎨 **Domain-adaptive themes**: Emerald/cyan for dev, orange/pink for creative, teal/coral for healthcare, slate/amber for business, indigo/yellow for education, violet/fuchsia for analysis
+- 👤 **Your name throughout**: "Stuart's AI-Powered Development Blueprint" (not generic "Your Roadmap")
+- 📊 **Executive summary**: Total time savings, ROI potential, opportunities at a glance
+- ✨ **Modern aesthetics**: Glassmorphism, gradient meshes, neural network patterns
+- 💫 **Smooth animations**: Hover effects, impact bars, glow accents
 
 **User Experience Highlights**:
-- ✨ Progressive insights every 20-40 conversations ("I'm seeing strong patterns in development...")
-- 🎯 Clear completion message with pattern counts
-- 🚀 Prominent build buttons with explicit call-to-action
-- 📋 Simple command: "Build skill #1" and it's created
+- ✨ Progressive insights every 20-40 conversations
+- 🎯 Beautiful impact visualization bars
+- 🚀 Personalized build buttons: "Build This Skill for Stuart"
+- 📋 Terminal-style command prompt for tech feel
 
 **Technical Innovation**: Processes unlimited conversations by keeping only statistics (~5-10KB) vs raw data (200KB+).
 
@@ -359,118 +366,226 @@ recommendations.sort((a, b) => {
 
 ## 📊 Phase 4: Interactive Dashboard
 
-**Create React Artifact** with recommendations:
+**PERSONALIZATION FIRST**: Extract user's name from conversation context if available. Detect primary domain from top categories for color theming.
+
+**Create React Artifact** with domain-adaptive design:
 
 ```jsx
 import React, { useState } from 'react';
 
 const SkillDashboard = () => {
+  // PERSONALIZATION: Extract from analysis or use "Your"
+  const userName = "[First Name]" || "Your"; // e.g., "Stuart", "Dr. Chen", "Chef Mario"
+  const primaryDomain = "[top category]"; // e.g., "development", "healthcare", "creative"
+
   const [skills] = useState([
     {
       id: 1,
       name: "[Generated from analysis]",
-      description: "[Based on your patterns]",
+      description: "[Based on patterns]",
       impact: "VERY HIGH",
       timeSaved: "[X hrs/month]",
       buildTime: "[Y-Z hours]",
       breakEven: "[N weeks]",
-      evidence: "[X conversations about Y topics]"
+      evidence: "[X conversations]",
+      impactScore: 95
     },
     // ... recommendations 2-5
   ]);
 
-  const impactColors = {
-    "VERY HIGH": "bg-green-100 text-green-800 border-green-300",
-    "HIGH": "bg-blue-100 text-blue-800 border-blue-300",
-    "MEDIUM": "bg-yellow-100 text-yellow-800 border-yellow-300"
+  // DOMAIN-ADAPTIVE COLOR SCHEMES (not blue-purple!)
+  const domainThemes = {
+    development: {
+      from: "from-emerald-500", to: "to-cyan-500",
+      accent: "emerald-500", glow: "emerald-400/20",
+      text: "text-emerald-900", tagline: "AI-Powered Development Blueprint"
+    },
+    creative: {
+      from: "from-orange-500", to: "to-pink-500",
+      accent: "orange-500", glow: "orange-400/20",
+      text: "text-orange-900", tagline: "Creative Automation Playbook"
+    },
+    healthcare: {
+      from: "from-teal-500", to: "to-coral-500",
+      accent: "teal-500", glow: "teal-400/20",
+      text: "text-teal-900", tagline: "Healthcare Intelligence Report"
+    },
+    business: {
+      from: "from-slate-600", to: "to-amber-500",
+      accent: "slate-600", glow: "amber-400/20",
+      text: "text-slate-900", tagline: "Strategic Automation Portfolio"
+    },
+    education: {
+      from: "from-indigo-500", to: "to-yellow-500",
+      accent: "indigo-500", glow: "yellow-400/20",
+      text: "text-indigo-900", tagline: "Educational Efficiency Analysis"
+    },
+    analysis: {
+      from: "from-violet-500", to: "to-fuchsia-500",
+      accent: "violet-500", glow: "fuchsia-400/20",
+      text: "text-violet-900", tagline: "Data Intelligence Dashboard"
+    }
   };
 
+  const theme = domainThemes[primaryDomain] || domainThemes.development;
+
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <div className="max-w-4xl mx-auto mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
-          Your Skill-Building Roadmap
-        </h1>
-        <p className="text-gray-600">
-          Analysis of {totalProcessed} conversations • Pattern-based recommendations
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 p-4 md:p-8">
+      {/* Neural Network Background Pattern */}
+      <div className="fixed inset-0 opacity-[0.015] pointer-events-none"
+           style={{backgroundImage: 'radial-gradient(circle at 1px 1px, rgb(0 0 0) 1px, transparent 0)', backgroundSize: '40px 40px'}}>
       </div>
 
-      <div className="max-w-4xl mx-auto space-y-4">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">
-          Top 5 Skills to Build
-        </h2>
-
-        {skills.map((skill) => (
-          <div
-            key={skill.id}
-            className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
-          >
-            <div className="flex justify-between items-start mb-3">
-              <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white font-bold text-sm">
-                #{skill.id}
-              </span>
-              <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${impactColors[skill.impact]}`}>
-                {skill.impact} IMPACT
-              </span>
-            </div>
-
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              {skill.name}
-            </h3>
-            <p className="text-gray-600 mb-4">
-              {skill.description}
-            </p>
-
-            <div className="grid grid-cols-3 gap-4 mb-4 text-sm">
+      <div className="max-w-6xl mx-auto relative">
+        {/* Personalized Header with Gradient */}
+        <div className="mb-8 relative">
+          <div className={`absolute inset-0 bg-gradient-to-r ${theme.from} ${theme.to} opacity-10 blur-3xl`}></div>
+          <div className="relative backdrop-blur-sm bg-white/60 rounded-2xl p-8 border border-white/20 shadow-xl">
+            <div className="flex items-start justify-between mb-4">
               <div>
-                <div className="text-gray-500">Time Saved</div>
-                <div className="font-semibold text-gray-900">{skill.timeSaved}</div>
+                <h1 className={`text-4xl font-bold bg-gradient-to-r ${theme.from} ${theme.to} bg-clip-text text-transparent mb-2`}>
+                  {userName}'s {theme.tagline}
+                </h1>
+                <p className="text-slate-600 text-lg">
+                  AI-Generated Analysis • {totalProcessed} Conversations Analyzed
+                </p>
               </div>
-              <div>
-                <div className="text-gray-500">Build Time</div>
-                <div className="font-semibold text-gray-900">{skill.buildTime}</div>
-              </div>
-              <div>
-                <div className="text-gray-500">Break-Even</div>
-                <div className="font-semibold text-gray-900">{skill.breakEven}</div>
+              <div className={`px-4 py-2 bg-gradient-to-r ${theme.from} ${theme.to} text-white rounded-full text-sm font-semibold shadow-lg`}>
+                ✨ AI-Powered
               </div>
             </div>
 
-            <p className="text-xs text-gray-500 mb-4">
-              📊 Evidence: {skill.evidence}
-            </p>
-
-            <button
-              onClick={() => {
-                // Trigger skill building by sending message to Claude
-                alert(`Click confirmed! Tell me: "Build skill #${skill.id}" and I'll create this custom skill for you with quality standards enforced.`);
-              }}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 cursor-pointer"
-            >
-              🚀 Build This Skill →
-            </button>
+            {/* Executive Summary */}
+            <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-slate-200">
+              <div>
+                <div className="text-slate-500 text-sm font-medium">Total Time Savings</div>
+                <div className={`text-2xl font-bold ${theme.text}`}>[XXX hrs/month]</div>
+              </div>
+              <div>
+                <div className="text-slate-500 text-sm font-medium">ROI Potential</div>
+                <div className={`text-2xl font-bold ${theme.text}`}>[X,XXX%]</div>
+              </div>
+              <div>
+                <div className="text-slate-500 text-sm font-medium">Automation Opportunities</div>
+                <div className={`text-2xl font-bold ${theme.text}`}>5 Skills</div>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
-
-      <div className="max-w-4xl mx-auto mt-8 p-6 bg-blue-50 border-2 border-blue-200 rounded-lg">
-        <h3 className="text-lg font-bold text-gray-900 mb-2">
-          🎯 Ready to Build?
-        </h3>
-        <p className="text-gray-700 mb-4">
-          Click any "Build This Skill" button above, or just say:
-        </p>
-        <div className="bg-white p-4 rounded-lg border border-blue-300 font-mono text-sm">
-          "Build skill #1" or "Build skill #2" etc.
         </div>
-        <p className="text-xs text-gray-600 mt-3">
-          I'll create a complete, production-ready custom skill with quality verification!
-        </p>
-      </div>
 
-      <div className="max-w-4xl mx-auto mt-6 text-center text-sm text-gray-500">
-        <p>Recommendations based on patterns from your last {totalProcessed} conversations</p>
+        {/* Skills Grid */}
+        <div className="space-y-4">
+          {skills.map((skill, idx) => (
+            <div
+              key={skill.id}
+              className="group relative backdrop-blur-md bg-white/80 rounded-xl p-6 border border-white/40 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              {/* Glow effect on hover */}
+              <div className={`absolute inset-0 bg-gradient-to-r ${theme.from} ${theme.to} opacity-0 group-hover:opacity-5 rounded-xl transition-opacity`}></div>
+
+              <div className="relative">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${theme.from} ${theme.to} flex items-center justify-center text-white font-bold text-lg shadow-lg`}>
+                      {skill.id}
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-1">
+                        <h3 className="text-xl font-bold text-slate-900">
+                          {skill.name}
+                        </h3>
+                        {idx === 0 && <span className="text-xs px-2 py-1 bg-amber-100 text-amber-800 rounded-full font-semibold">HIGHEST IMPACT</span>}
+                      </div>
+                      <p className="text-slate-600 text-sm">
+                        {skill.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Impact Visualization Bar */}
+                <div className="mb-4">
+                  <div className="flex justify-between text-xs text-slate-500 mb-1">
+                    <span>Impact Score</span>
+                    <span className="font-semibold">{skill.impactScore}%</span>
+                  </div>
+                  <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
+                    <div
+                      className={`h-full bg-gradient-to-r ${theme.from} ${theme.to} transition-all duration-1000 ease-out`}
+                      style={{width: `${skill.impactScore}%`}}
+                    ></div>
+                  </div>
+                </div>
+
+                {/* Metrics Grid */}
+                <div className="grid grid-cols-4 gap-4 mb-4 p-4 bg-slate-50/50 rounded-lg">
+                  <div>
+                    <div className="text-xs text-slate-500 mb-1">💰 Time Saved</div>
+                    <div className="font-bold text-slate-900">{skill.timeSaved}</div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-slate-500 mb-1">⏱️ Build Time</div>
+                    <div className="font-bold text-slate-900">{skill.buildTime}</div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-slate-500 mb-1">📊 Break-Even</div>
+                    <div className="font-bold text-slate-900">{skill.breakEven}</div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-slate-500 mb-1">🎯 Impact</div>
+                    <div className={`font-bold ${theme.text}`}>{skill.impact}</div>
+                  </div>
+                </div>
+
+                <div className="text-xs text-slate-500 mb-4 flex items-center gap-2">
+                  <span className="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                  Evidence: {skill.evidence}
+                </div>
+
+                {/* Build Button with Gradient */}
+                <button
+                  onClick={() => {
+                    alert(`🚀 Ready to build! Tell me: "Build skill #${skill.id}" and I'll create this for ${userName}!`);
+                  }}
+                  className={`w-full bg-gradient-to-r ${theme.from} ${theme.to} hover:shadow-xl text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] cursor-pointer flex items-center justify-center gap-2`}
+                >
+                  <span className="text-xl">⚡</span>
+                  Build This Skill for {userName}
+                  <span className="text-xl">→</span>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action Panel */}
+        <div className="mt-8 relative">
+          <div className={`absolute inset-0 bg-gradient-to-r ${theme.from} ${theme.to} opacity-10 blur-2xl`}></div>
+          <div className="relative backdrop-blur-md bg-white/90 rounded-2xl p-8 border border-white/40 shadow-xl">
+            <div className="flex items-start gap-4">
+              <div className={`text-5xl`}>🎯</div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                  Ready to Build, {userName}?
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  Click any skill button above, or simply tell me which one interests you most:
+                </p>
+                <div className="bg-slate-900 text-green-400 p-4 rounded-lg font-mono text-sm">
+                  <span className="text-green-600">$</span> Build skill #1
+                </div>
+                <p className="text-xs text-slate-500 mt-3">
+                  💎 Each skill includes complete implementation, testing, documentation, and quality verification
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="mt-6 text-center text-sm text-slate-400">
+          <p>Personalized recommendations powered by AI analysis of {userName}'s last {totalProcessed} conversations</p>
+        </div>
       </div>
     </div>
   );
