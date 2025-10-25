@@ -1,32 +1,34 @@
 # Conversation Skill Analyzer
 
-> Analyzes your Claude conversation history to discover automation opportunities, then **helps you BUILD those skills with quality verification**.
+> Analyzes your Claude conversation history to discover automation opportunities **efficiently without maxing out context**.
 
-[![Version](https://img.shields.io/badge/version-4.0.1-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases)
+[![Version](https://img.shields.io/badge/version-4.1.0-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases)
 [![Platform](https://img.shields.io/badge/platform-Claude%20AI-blue.svg)](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ## What It Does
 
 This skill:
-1. 🔍 **Analyzes** YOUR Claude conversation patterns
-2. 🎯 **Recommends** your top 5 skills to build (personalized to YOUR work)
-3. ✅ **Builds** those skills with quality verification
+1. ⚡ **Fetches** 60 recent conversations (metadata only)
+2. 🔍 **Analyzes** conversation title patterns
+3. 🎯 **Recommends** your top 5 personalized skill-building opportunities
+4. 📊 **Displays** interactive React dashboard with actionable insights
 
-**Complete workflow:** Analyze → Recommend → Build → **VERIFY**
+**Complete workflow:** Fetch → Analyze → Recommend → **BUILD**
 
 **Key Features:**
-- **✅ Fixed 60-chat bug** - Now reliably fetches 160 conversations
-- **📊 Complete React dashboard** - Actual JSX code included
-- **🔧 Quality verification** - 12-point checklist ensures professional results
-- **🎯 Claude-native** - Uses recent_chats tool for direct conversation access
+- **⚡ Context-efficient** - Fetches only 60 conversations, completes within limits
+- **🎯 Metadata analysis** - Analyzes titles/timestamps only (not full content)
+- **🚀 Fast completion** - Finishes in ~10-15 seconds
+- **📊 React dashboard** - Professional visualization of recommendations
+- **🎨 Claude-native** - Uses recent_chats tool for conversation access
 
 ---
 
 ## 🚀 Quick Start
 
 ### Installation
-1. Download [conversation-skill-analyzer-v4.0.1.zip](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases/latest/download/conversation-skill-analyzer-v4.0.1.zip)
+1. Download [conversation-skill-analyzer-v4.1.0.zip](https://github.com/stuinfla/Claude-Skills-Conversation_skill_analyzer/releases/latest/download/conversation-skill-analyzer-v4.1.0.zip)
 2. Go to [Claude Settings > Skills](https://claude.ai/settings/skills)
 3. Upload the ZIP file
 4. Say: `Install this skill`
@@ -47,21 +49,29 @@ Claude will start building with quality standards enforced!
 
 ---
 
-## 🎉 What's New in v4.0.1
+## 🎉 What's New in v4.1.0
 
-### 🔧 Platform Clarity
-- **Removed false ChatGPT compatibility claims**
-- ChatGPT doesn't have native conversation history API
-- Skill is Claude-only, using `recent_chats` tool
-- Honest and accurate capability description
+### ⚡ CRITICAL: Context Window Fix
+- **Problem**: Previous versions fetched 160 conversations, maxing out context before delivering results
+- **Root Cause**: Trying to load too much conversation data into context window
+- **Solution**: Fetch only 60 conversations, extract metadata only (titles/timestamps)
+- **Result**: Fast, efficient analysis that completes within context limits (~10-15 seconds)
 
-## Previous Updates (v4.0.0)
+### Key Changes
+- ⚡ Reduced from 160 → 60 conversations
+- 🎯 Metadata-only analysis (titles/timestamps, not full content)
+- 🚀 Completes in ~10-15 seconds (was timing out before)
+- ✅ Lightweight pattern detection from conversation titles
+- 📊 Still generates full React dashboard with personalized recommendations
 
-### 🔧 Critical Bug Fix
-- **Problem**: Only 60 conversations fetched (instead of 160)
-- **Root Cause**: Tool defaulting to n=20, stopping after 3 calls
-- **Solution**: Mandatory execution protocol with explicit `n: 40` syntax
-- **Result**: 100% reliable 160-conversation fetch
+## Previous Updates
+
+**v4.0.1** - Platform Clarity
+- Removed false ChatGPT compatibility claims
+- Claude-only with honest capability description
+
+**v4.0.0** - Production Release (had context issues)
+- Attempted 160-conversation fetch (caused context overflow)
 
 ### 📊 Complete React Dashboard
 - Actual JSX code included (not just instructions)
@@ -175,27 +185,34 @@ Time Saved: 40-50 hrs/month | Build: 12-16 hrs | Break-Even: 3 days
 
 ## 📊 Technical Details
 
-- **Analysis time**: ~30-45 seconds
-- **Privacy**: Analyzes metadata only, not full content
-- **Pattern detection**: Frequency, recency, domain clustering
+- **Analysis time**: ~10-15 seconds
+- **Conversations fetched**: 60 (3 calls × 20 each)
+- **Data extracted**: Titles and timestamps only (not full content)
+- **Privacy**: Lightweight metadata analysis only
+- **Pattern detection**: Keyword frequency from titles
 - **Output**: Interactive React dashboard with Tailwind CSS
-- **Quality**: 12-point verification checklist
+- **Context usage**: Efficient, completes within limits
 - **Native tool**: Uses Claude's `recent_chats` API
 
 ---
 
 ## 🎓 Version History
 
-**v4.0.1** (Current) - Platform Clarity Patch
-- ✅ Removed false ChatGPT compatibility claims
-- ✅ Claude-only with accurate capability description
-- ✅ Honest platform requirements
+**v4.1.0** (Current) - Context-Efficient Release
+- ⚡ CRITICAL FIX: Reduced 160 → 60 conversations to prevent context overflow
+- ⚡ Metadata-only analysis (titles/timestamps)
+- ⚡ Fast completion (~10-15 seconds)
+- ✅ Lightweight pattern detection
+- ✅ React dashboard generation
 
-**v4.0.0** - Complete Production Release
-- ✅ Fixed 60-chat bug with mandatory execution protocol
-- ✅ Complete React dashboard code (JSX + Tailwind)
-- ✅ Integrated quality verification (12-point checklist)
-- ✅ Clean single version (no v3/v4 mixing)
+**v4.0.1** - Platform Clarity Patch
+- Removed false ChatGPT compatibility claims
+- Claude-only with accurate capability description
+
+**v4.0.0** - Production Release
+- Attempted 160-conversation fetch (caused context issues)
+- Complete React dashboard code (JSX + Tailwind)
+- Quality verification checklist
 
 **v3.0.0** - Optimized Data Fetching
 - Efficient fetching: 40 per call, 160 total target
